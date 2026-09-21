@@ -1,0 +1,375 @@
+/* Custom Styles for Adrija Posam Portfolio */
+
+:root {
+  --font-primary: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Ambient glow orb for background */
+.ambient-glow {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Section Header Typography */
+.section-header {
+  text-align: center;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.dark .section-badge {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+.dark .section-title {
+  color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.dark .section-subtitle {
+  color: #94a3b8;
+}
+
+/* Feature & Skill Cards */
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.dark .feature-card {
+  background-color: #111827;
+  border-color: #1f293d;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -8px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.dark .feature-card:hover {
+  box-shadow: 0 12px 30px -8px rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Experience Timeline Card */
+.experience-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .experience-card {
+  background-color: #111827;
+  border-color: #1f293d;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* Skill Tabs */
+.skill-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.dark .skill-tab {
+  background-color: #182234;
+  color: #94a3b8;
+  border-color: #1f293d;
+}
+
+.skill-tab:hover {
+  color: #4f46e5;
+  background-color: #e0e7ff;
+}
+
+.dark .skill-tab:hover {
+  color: #a5b4fc;
+  background-color: #1f293d;
+}
+
+.skill-tab.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.dark .skill-tab.active {
+  background-color: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* Skill Card */
+.skill-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.dark .skill-card {
+  background-color: #111827;
+  border-color: #1f293d;
+}
+
+.skill-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 0.375rem;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.dark .skill-bar {
+  background-color: #1f293d;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Course Pill & Tag */
+.course-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.dark .course-pill {
+  background-color: #182234;
+  color: #cbd5e1;
+  border-color: #1f293d;
+}
+
+.course-pill:hover {
+  border-color: #818cf8;
+  color: #4f46e5;
+}
+
+.dark .course-pill:hover {
+  border-color: #6366f1;
+  color: #a5b4fc;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.dark .tag {
+  background-color: #182234;
+  color: #94a3b8;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.dark .form-input {
+  border-color: #1f293d;
+  background-color: #0a0e17;
+  color: #f8fafc;
+}
+
+.form-input:focus {
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.dark .form-input:focus {
+  border-color: #818cf8;
+  background-color: #111827;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* Active Nav Links */
+.nav-link.active {
+  color: #4f46e5;
+  background-color: #e0e7ff;
+}
+
+.dark .nav-link.active {
+  color: #818cf8;
+  background-color: #182234;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1f293d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* =========================================================
+   Print Stylesheet Optimization (for Resume PDF export)
+   ========================================================= */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide interactive / visual extras */
+  header,
+  #theme-toggle,
+  #mobile-menu,
+  #mobile-menu-btn,
+  .ambient-glow,
+  #contact-form,
+  #toast,
+  footer,
+  button[title="Copy email"],
+  button[title="Copy phone"],
+  a[href^="javascript:window.print"] {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    space-y: 1.5rem !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .feature-card,
+  .experience-card,
+  .skill-card {
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    break-inside: avoid;
+  }
+
+  .text-transparent {
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+  }
+
+  .section-badge {
+    border: 1px solid #9ca3af !important;
+    color: #374151 !important;
+    background: transparent !important;
+  }
+}
